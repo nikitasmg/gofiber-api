@@ -1,1 +1,1 @@
-web: bin/gofiber-api
+web: /gofiber-api
