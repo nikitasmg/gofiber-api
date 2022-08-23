@@ -1,1 +1,1 @@
-web: /gofiber-api
+web: go run main.go
