@@ -1,6 +1,6 @@
 package model
 
 type Card struct {
-	Id      string
-	Content string
+	Id      string `json:"id"`
+	Content string `json:"content"`
 }
