@@ -3,6 +3,7 @@ package handler
 import (
 	"github.com/gofiber/fiber/v2"
 	"main/model"
+	"time"
 )
 
 var cards = make([]model.Card, 0)
@@ -29,6 +30,7 @@ func GetCard(c *fiber.Ctx) error {
 
 func CreateCard(c *fiber.Ctx) error {
 	card := new(model.Card)
+	card.CreatedAt = time.Now()
 
 	if err := c.BodyParser(card); err != nil {
 		return c.Status(500).JSON(fiber.Map{"status": "error", "message": "Couldn't create product", "data": err})
