@@ -17,4 +17,5 @@ func SetupRoutes(app *fiber.App) {
 	product.Get("/:id", handler.GetCard)
 	product.Post("/", handler.CreateCard)
 	product.Delete("/:id", handler.DeleteCard)
+	product.Put("/:id", handler.UpdateCard)
 }
